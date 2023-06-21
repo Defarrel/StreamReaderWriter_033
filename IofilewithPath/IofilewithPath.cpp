@@ -23,6 +23,7 @@ int main() {
 		outfile << baris << endl;
 	}
 
+
 	outfile.close();
 	ifstream infile;
 	infile.open(namafile + ".txt", ios::out);
