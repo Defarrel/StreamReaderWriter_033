@@ -26,7 +26,7 @@ int main() {
 
 	outfile.close();
 	ifstream infile;
-	infile.open(namafile + ".txt", ios::out);
+	infile.open(namafile, ios::in);
 	cout << endl << ">= Membuka dan membaca file" << endl;
 	if (infile.is_open()) {
 		while (getline(infile, baris)) {
