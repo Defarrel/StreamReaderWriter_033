@@ -5,26 +5,27 @@ using namespace std;
 
 int main() {
 	string baris;
-	//membuka file dalam mode menulis
+	string namafile;
+
+	cout << "Masukan nama file : ";
+	cin >> namafile;
+
 	ofstream outfile;
-	//menunjuk ke sebuah mama file
-	outfile.open("contohfile.pdf");
+	outfile.open(namafile+".txt",ios::out);
 
 	cout << ">= Menulis file, \'q\' untuk keluar" << endl;
 
 	while (true) {
 		cout << "- ";
-		//mendapatkan setiap karakter dalam satu baris
 		getline(cin, baris);
-		//loop akan berhenti jika anda masukan karakter q
 		if (baris == "q")
-		break;
+			break;
 		outfile << baris << endl;
 	}
 
 	outfile.close();
 	ifstream infile;
-	infile.open("contohfile.pdf");
+	infile.open(namafile + ".txt", ios::out);
 	cout << endl << ">= Membuka dan membaca file" << endl;
 	if (infile.is_open()) {
 		while (getline(infile, baris)) {
