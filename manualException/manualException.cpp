@@ -10,5 +10,9 @@ int main() {
 	catch (int a) {
 		cout << "Pengecualian akan dieksekusi" << endl;
 	}
+	catch (...) {
+		cout << "Default pengecualian dieksekusi" << endl;
+	}
 
+	return 0;
 }
