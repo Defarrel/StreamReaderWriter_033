@@ -12,5 +12,4 @@ int main() {
 
 	cout << ">= Menulis file, \'q\' untuk keluar" << endl;
 
-
 }
